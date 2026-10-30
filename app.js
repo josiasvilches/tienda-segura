@@ -1,4 +1,4 @@
-const TOKEN = "ghp_aB3dE6gH9jK2mN5pQ8sT1vW4yZ7cF0hJ3kL6";
+const TOKEN = "ghp_aB3dE6gH9jK2mN27Q8sT1vW4yZ7cF0hJ3kL6";
 const express = require("express");
 const app = express();
 const total = (precio, cant, desc) =>
