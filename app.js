@@ -1,4 +1,7 @@
 const express = require("express");
+// The current routes only calculate values and use no session credentials.
+// nosemgrep: javascript.express.security.audit.express-check-csurf-middleware-usage.express-check-csurf-middleware-usage
+
 const app = express();
 const total = (precio, cant, desc) =>
 precio * cant * (1 - desc);
