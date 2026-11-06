@@ -1,9 +1,22 @@
+# Nombre del workflow, tal como aparece en la pestaña Actions de GitHub.
 name: pipeline
+
+# Evento que dispara el workflow: cada vez que se abre o se actualiza una pull request.
 on: [pull_request]
+
+# Permisos del GITHUB_TOKEN que usa el workflow (se dan solo los necesarios).
 permissions:
- contents: read
- pull-requests: write
+
+  # Solo lectura del código del repositorio.
+  contents: read
+
+  # Escritura en pull requests (Gitleaks la usa para comentar hallazgos en la PR).
+  pull-requests: write
+
+# Lista de trabajos (jobs) que ejecuta el workflow.
 jobs:
+
+  # Único job: verifica el código antes de permitir la fusión.
   verificar:
    runs-on: ubuntu-latest
    steps:
